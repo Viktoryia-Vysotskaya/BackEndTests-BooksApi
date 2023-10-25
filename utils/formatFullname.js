@@ -1,5 +1,6 @@
 module.exports = (fullName) => {
   if (typeof fullName !== 'string') return 'Error';
+  if (fullName.length < 3) return "Error";
   if (fullName.length <= 0) return 'Error';
   if (fullName.split(' ').length !== 2) return 'Error';
   const [firstName, lastName] = fullName.split(' ');

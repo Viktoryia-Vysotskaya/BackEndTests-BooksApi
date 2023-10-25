@@ -22,4 +22,7 @@ describe('formatFullname', () => {
         expect(formatFullname('John')).to.equal('Error');
         expect(formatFullname('Doe')).to.equal('Error');
     });
+    it('should return an error if "formatFullName" have more than 2 blocks', () => {
+        expect(formatFullname('John Doe Smith')).to.equal('Error');
+    });
 });
